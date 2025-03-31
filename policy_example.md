@@ -31,7 +31,7 @@ SPDX-License-Identifier: CC-BY-4.0
 The main license of the project is a proprietary license, and the product software copies are distributed to customers. Therefore, any third-party dependency licenses must be compatible with a proprietary license being distributed to customers, considering the applicable software interaction. Permissive licensed dependencies are generally unproblematic, while copyleft license dependencies are allowed only if the software interaction is appropriate. Non-open-source licensed dependencies must be inspected separately.
 
 #### Product YYY
-The main license of the project is a proprietary license, and the product is offered only as a SaaS service. Therefore, any open-source third-party dependency licenses are generally allowed, with the exception of licenses that include a network-clause. Non-open-source licensed dependencies must be inspected separately.
+The main license of the project is a proprietary license, and the product is offered only as a SaaS. Therefore, any open-source third-party dependency licenses are generally allowed, with the exception of licenses that include a network-clause. Non-open-source licensed dependencies must be inspected separately.
 
 ---
 
@@ -50,7 +50,7 @@ As the product is distributed under a proprietary license, copyleft obligations 
 The product is software, and not a device, hence anti-tivo-properties in licenses are ok.
 
 #### Product YYY
-Since the product is not distributed but offered as a SaaS service, copyleft obligations do not trigger. Therefore, all copyleft licenses are allowed.
+Since the product is not distributed but offered as a SaaS, copyleft obligations do not trigger. Therefore, all copyleft licenses are allowed.
 
 ---
 
@@ -60,7 +60,7 @@ This section describes different types of software interaction and their implica
 | Software Interaction Type | Description of interaction between OSS and Other Software |
 |---------------------------|-------------|
 | **Code Change** | Direct edits to OSS source code. Macro extensions and other methods of copying OSS code into source code files of Other Software.|
-| **Separate Files** | OSS software remains in separate, unchanged files. All code changes  created (i.e. Other Software) are in separate source code files when compared to OSS. No code is copied from OSS files to files of Other Software. Code may be in the same module with code licenses in other ways.|
+| **Separate Files** | OSS remains in separate, unchanged files. All code changes created (i.e. Other Software) are in separate source code files when compared to OSS. No code is copied from OSS files to files of Other Software. Code may be in the same module with code licenses in other ways.|
 | **Separate Modules** | OSS is in a separate module within the same software project. All code changes created (i.e. Other Software) are in separate source code modules when compared to OSS. No code is copied from OSS modules to files of Other Software. |
 | **Static Linking** | Linking Other Software code to an OSS library/component in a way that creates one executable binary file. Linking OSS to Other Software in the same way. Bundling Other Software with OSS library/component to create a file served to users, e.g. minified javascript files served to browsers. React native used in creation of mobile applications. |
 | **Dynamic Linking** | Linking Other Software executable file to an OSS library when the executable is being executed. Package manager controlled Java dependencies, such as Maven, Gradle, Python Package Index or Node dependencies. |
@@ -100,7 +100,7 @@ LGPL-2.0, LGPL-2.1, LGPL-3.0.
 Open source license that requires you to license modifications made into the same software module with the same license as the original open-source software module. This also applies if you add code from this module to your own module.
 
 **Examples:**
-EPL-1.1, CPL-1.0.
+EPL-1.0, CPL-1.0.
 
 ---
 
@@ -271,7 +271,7 @@ This property indicates that the license includes an AutoConf exception or anoth
 
 A copyleft license with a wide or harder-to-control scope of copyleft effect. The license requires software interacting with the licensed software to some wide extent to be licensed under the same copyleft license (copyleft effect). Further fact-finding by the project will be necessary to determine the extent of the copyleft effect in the present circumstances.
 
-1. **First check for false positives.** The scanner could erroneously label the package or file with the wrong license.
+1. **First, check for false positives.** The scanner could erroneously label the package or file with the wrong license.
 
 2. **If the issue is not a false positive:**
    - Check whether the strong copyleft code is used without any linking, e.g., separate process or database, API, or RPC interaction.
@@ -286,10 +286,10 @@ A copyleft license with a wide or harder-to-control scope of copyleft effect. Th
 ##### How to Fix (by OSO)
 
 1. **If the issue is not solved with an architecture check:**
-   - (i) Relicense under the copyleft license the code covered by the copyleft effect.
+   - (i) Relicense the code covered by the copyleft effect under the copyleft license.
    - (ii) Reanalyze dynamic linking options with legal/Double Open, etc.
 
-   If this is not possible, the component needs to be switched out or another license or permission needs to be acquired.
+   If this is not possible, the component needs to be switched out, or another license or permission needs to be acquired.
 
 2. **Any deviations, if approved, need to be recorded to ORT** with a resolution with the reason `CANT_FIX_ISSUE` in the project's `.ort.yml` file with the comment: *"Not Fixed, will be fixed ASAP."*
 
@@ -305,7 +305,7 @@ A copyleft license with a wide or harder-to-control scope of copyleft effect. Th
 
 A LGPL copyleft license requires code statically linking the same copyleft code, or being part of the same resulting binary, to follow the LGPL terms.
 
-1. **First check for false positives.** The scanner could erroneously label the package or file with the wrong license.
+1. **First, check for false positives.** The scanner could erroneously label the package or file with the wrong license.
 
 2. **If the issue is not a false positive:**
    - Check whether it is a separate dependency which was not automatically detected.
@@ -313,7 +313,7 @@ A LGPL copyleft license requires code statically linking the same copyleft code,
 
 3. **Check if your own or third party proprietary code is part of the same binary as LGPL code:**
    - If it is not, the use is acceptable as such.
-   - If it is, alternatives are:
+   - If it is, the alternatives are:
      - (i) Change the interaction so that the own proprietary code no longer ends up in the same binary.
      - (ii) Contact the Open Source Officer (OSO) for other alternatives.
 
@@ -325,7 +325,7 @@ A LGPL copyleft license requires code statically linking the same copyleft code,
    - (i) Relicense under the copyleft license the code covered by the copyleft effect.
    - (ii) Create for users an opportunity to modify the LGPL licensed code and relink statically with the proprietary code.
 
-2. **If this is not possible,** the component needs to be switched out or another license or permission needs to be acquired.
+2. **If this is not possible,** the component needs to be switched out, or another license or permission needs to be acquired.
 
 3. **Any deviations, if approved, need to be recorded to ORT** with a resolution with the reason `CANT_FIX_ISSUE` in the project's `.ort.yml` file with the comment: *"Not Fixed, will be fixed ASAP."*
 
@@ -341,7 +341,7 @@ A LGPL copyleft license requires code statically linking the same copyleft code,
 
 A module level copyleft license requires code in the same module to be licensed under the same copyleft terms, for example Eclipse Public License (EPL-1.0).
 
-1. **First check for false positives.** The scanner could erroneously label the package or file with the wrong license.
+1. **First, check for false positives.** The scanner could erroneously label the package or file with the wrong license.
 
 2. **If the issue is not a false positive:**
    - Check whether it is an open source dependency which was not automatically detected.
@@ -374,7 +374,7 @@ A module level copyleft license requires code in the same module to be licensed 
 
 If the file has a file level copyleft license, such as Mozilla Public License (MPL-2.0) and an own copyright notice:
 
-1. **First check for false positives.** The scanner could erroneously label the package or file with the wrong license.
+1. **First, check for false positives.** The scanner could erroneously label the package or file with the wrong license.
 
 2. **If the issue is not a false positive:**
    - Check whether it is an open source dependency which was not automatically detected.
@@ -409,7 +409,7 @@ If the file has a file level copyleft license, such as Mozilla Public License (M
 
 The license contains restrictions regarding the usage of the software making it not open source in a strict sense.
 
-1. **First check for false positives.** The scanner could erroneously label the package or file with the wrong license.
+1. **First, check for false positives.** The scanner could erroneously label the package or file with the wrong license.
 
 2. **Investigate whether those restrictions are compatible with the objectives and practices of the project:**
    - If the license is found to be acceptable, add a resolution to ORT using the resolution expression `LICENSE_ACQUIRED` in the project's `.yml` file, with the comment: *"free restricted license complied with"* or another justification.
@@ -431,11 +431,11 @@ The license contains restrictions regarding the usage of the software making it 
 
 This may be third-party proprietary software offered under a direct commercial license between supplier and customer. Further fact-finding by the project will be necessary to determine the code's license status and function, if any.
 
-1. **First check for false positives.** The scanner could erroneously label the package or file with the wrong license.
+1. **First, check for false positives.** The scanner could erroneously label the package or file with the wrong license.
 2. **If it is not a false positive:**
    - Check whether you already have the license.
 3. **If it is an unknown commercial license:**
-   - Ask OSO/Double Open to investigate the license status.
+   - Ask OSO/Compliance Service Provider to investigate the license status.
 4. **Consider acquiring a license:**
    - If a license is acquired, create an ORT resolution in the project's `.yml` file using the reason `LICENSE_ACQUIRED` with a relevant comment.
 5. **If the issue remains after investigation:**
@@ -460,7 +460,7 @@ This may be third-party proprietary software offered under a direct commercial l
 
 This is typically proprietary software (or not open source) which may be released through a source code distribution model that includes arrangements where the source can be viewed, and in some cases modified, but without necessarily meeting the criteria to be called open-source.
 
-1. **First check for false positives.** The scanner could erroneously label the package or file with the wrong license.
+1. **First, check for false positives.** The scanner could erroneously label the package or file with the wrong license.
 2. **If the issue is not a false positive:**
    - Investigate whether the licensing model is compatible with the project's objectives.
 3. **If the license is acceptable:**
@@ -483,9 +483,9 @@ This is typically proprietary software (or not open source) which may be release
 
 Third-party software that has a copyright notice, but no stated license. The absence of a license poses a risk that the copyright owner may assert license obligations at some future time.
 
-1. **First check for false positives.** The scanner could erroneously label the package or file with the wrong license.
+1. **First, check for false positives.** The scanner could erroneously label the package or file with the wrong license.
 2. **If the license cannot be determined:**
-   - Contact the copyright owner through OSO/Double Open/Validos to establish license obligations.
+   - Contact the copyright owner through OSO/Compliance Service Provider to establish license obligations.
 3. **If a license is found:**
    - Add license finding curation to ORT via package configuration file.
 4. **If not resolved:**
@@ -509,7 +509,7 @@ Third-party software that has a copyright notice, but no stated license. The abs
 1. **Check for false positives:**
    - Correct license findings via package configuration file curation
    - Use `orth` CLI to generate package config
-   - Consider path exclusions or resolution.yml entries for irrelevant files/issues
+   - Consider path exclusions or `resolutions.yml` entries for irrelevant files/issues
 
 2. **If not a false positive:**
    - Investigate compatibility with project objectives and downstream users
@@ -535,7 +535,7 @@ Third-party software that has a copyright notice, but no stated license. The abs
 1. **Check for false positives:**
    - Curate license findings via package config
    - Use `orth` CLI for configuration
-   - Consider path exclusions or resolution.yml entries
+   - Consider path exclusions or `resolutions.yml` entries
 
 2. **If valid finding:**
    - Discuss feature presentation limitations with product lead
@@ -617,4 +617,5 @@ Third-party software that has a copyright notice, but no stated license. The abs
 ---
 
 ## Version History
+- **31.03.2025** - Editorial changes.
 - **19.3.2025** - Sample version created for example purposes.
