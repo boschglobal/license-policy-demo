@@ -1,7 +1,7 @@
 # Simple Policy Description Example
 *March 2025*
 
-Note: this is a simple example open source policy collated from multiple sources. It is provided "as-is", for the purposes of illustrating open source policy usage in automation setting.
+Note: this is a simple example open source policy collated from multiple sources. It is provided "as-is" pursuant to the applicable CC-BY-4.0 license, for the purposes of illustrating open source policy usage in an automation setting.
 
 SPDX-FileCopyrightText: 2024-2025 Double Open Oy <support@doubleopen.org>
 SPDX-FileCopyrightText: 2022-2023 HH Partners, Attorneys-at-law Ltd <doubleopen@hhpartners.fi>
