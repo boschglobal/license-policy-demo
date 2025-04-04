@@ -5,7 +5,7 @@ Note: this is a simple example open source policy collated from multiple sources
 
 SPDX-FileCopyrightText: 2024-2025 Double Open Oy <support@doubleopen.org>\
 SPDX-FileCopyrightText: 2022-2023 HH Partners, Attorneys-at-law Ltd <doubleopen@hhpartners.fi>\
-SPDX-License-Identifier: CC-BY-4.0\
+SPDX-License-Identifier: CC-BY-4.0
 
 ## Table of Contents
 1. [Policy Principles](#policy-principles)
